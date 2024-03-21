@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"
+        integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Chat Application</title>
+</head>
+
+<body>
+    <script>
+        const socket = io();
+
+        document.getElementById('form').addEventListener("submit", function (e) {
+            e.preventDefault();
+            var field = document.getElementById('field');
+            socket.emit('chat message', field.value);
+            field.value = '';
+        });
+
+        socket.on('message', function (msg) {
+            console.log(msg);
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(msg));
+            document.getElementById('message-list').appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

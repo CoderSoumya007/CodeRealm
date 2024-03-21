@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color:#05253b;
+    overflow: hidden;
+display: flex;
+}
+#root{
+    width: 100%;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color:#05253b;
+    color: white;
+    padding:2rem;
+    
+}
+.heading{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; 
+}
+.hub {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+    height: 6.5rem;
+
+  }
+  #text{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-style: oblique;    
+    overflow: hidden;
+      white-space: nowrap;
+      animation: typing 5s  infinite;
+      border-right: 2px solid #000;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 62%;
+    }
+  }
+  
+  .hub span:nth-child(2) {
+    background: #FF9900;
+    color: #000000;
+    border-radius: 1vw;
+    padding: 1vw 1vw 1vw 1vw;
+  }
+  
+  
+.joining{
+    flex: 1;
+    background-color: #0c3451;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    height: 15rem;
+}
+
+.joinbuttons{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.joinbuttons button{
+    width: 50%;
+    border-radius: 0;
+    border-radius: 1rem;
+
+}
+
+
+.userform{
+    width: 100%;
+    flex-direction: column;
+   margin: auto;
+   display: flex;
+}
+
+
+
+/* CSS */
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: Phantomsans, sans-serif;
+  font-size:1rem;
+  justify-content: center;
+  line-height: 1em;
+  padding: 1rem;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+input{
+
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    background: #dee1e2;
+    display: block;
+    height: 36px;
+    :hover {
+        border-color: #ccc;
+    }
+    :focus{
+        border-color: #9147ff;
+        background: #fff;
+    }
+    
+}
