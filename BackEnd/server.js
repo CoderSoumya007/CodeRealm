@@ -359,8 +359,9 @@ io.on('connection', function (socket) {
 
     socket.on("code-changed", (code) => {
       initialCode[roomid] = code;
-      io.to(roomid).emit("update-code", code);
+      socket.in(roomid).emit("update-code", code);
     });
+
 
     socket.on('disconnecting', function () {
       const rooms = [...socket.rooms];  // Convert Set to Array
