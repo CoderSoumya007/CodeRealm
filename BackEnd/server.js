@@ -363,6 +363,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('disconnecting', function () {
+      console.log("disconnecting");
       const rooms = [...socket.rooms];  // Convert Set to Array
       rooms.forEach((roomid) => {
         connectedClients[roomid]--;
