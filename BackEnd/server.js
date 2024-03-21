@@ -22,7 +22,7 @@ const io = new Server(server, {
 });
 
 app.get('/', function (req, res) {
-
+  console.log("hello server!");
 });
 
 app.post('/output', function (req, res) {
