@@ -355,7 +355,7 @@ io.on('connection', function (socket) {
     connectedClients[roomid]++;
 
     io.to(roomid).emit('initial-code', initialCode[roomid]);
-    io.to(roomid).emit('update-connected-clients', connectedClients[roomid],username);
+    io.to(roomid).emit('update-connected-clients', connectedClients[roomid]);
 
     socket.on("code-changed", (code) => {
       initialCode[roomid] = code;
@@ -363,7 +363,6 @@ io.on('connection', function (socket) {
     });
 
     socket.on('disconnecting', function () {
-      console.log("disconnecting");
       const rooms = [...socket.rooms];  // Convert Set to Array
       rooms.forEach((roomid) => {
         connectedClients[roomid]--;

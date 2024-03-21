@@ -75,8 +75,7 @@ export default function Room({ socket }) {
             }
             return username.substring(0, 7) + "...";
         };
-        socket.on("update-connected-clients", (connectedClients, username) => {
-            toast.success(`${shortenUsername(username)} joined the room`)
+        socket.on("update-connected-clients", (connectedClients) => {
             setConnectedClients(connectedClients);
         });
     }, [socket]);
