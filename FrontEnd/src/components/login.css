@@ -3,6 +3,7 @@
     margin: 0;
     background-color:#05253b;
     height: 100vh;
+    overflow: auto;
 }
 
 .container{
