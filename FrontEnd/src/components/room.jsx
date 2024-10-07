@@ -48,7 +48,7 @@ const availablethemes = [
     { value: "terminal", label: "terminal" }
 ]
 export default function Room({ socket }) {
-    const [selectedlanguage, setselectedlanguage] = useState(availablelanguages[0].value);
+    const [selectedlanguage, setselectedlanguage] = useState(availablelanguages[3].value);
     const [selectedtheme, setselectedtheme] = useState(availablethemes[0].value)
     const { state } = useLocation();
     const { username } = state || { username: '' }
@@ -59,7 +59,7 @@ export default function Room({ socket }) {
     const [output, setOutput] = useState('');
 
     useEffect(() => {
-        setselectedlanguage(availablelanguages[0].value)
+        setselectedlanguage(availablelanguages[3].value)
         setselectedtheme(availablethemes[0].value)
     }, [roomid])
 
