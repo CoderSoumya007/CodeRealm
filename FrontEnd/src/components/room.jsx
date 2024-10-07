@@ -134,6 +134,16 @@ export default function Room({ socket }) {
         }
     };
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                alert('User ID copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+    };
+
     return <>
         <div className="homecontainer">
             <div className="navbar">
@@ -142,10 +152,19 @@ export default function Room({ socket }) {
                     CodeHub</div>
                 <div className="user-info">
                     <span>Username: {username}</span>
-                    <span>Room ID: {roomid}</span>
+                    <span>Room ID: {roomid}
+                    <i
+                                className="fas fa-copy ml-3"
+                                style={{ cursor: 'pointer' }} 
+                                onClick={() => copyToClipboard(roomid)}
+                                title="Copy User ID"
+                            >
+                            </i>
+                    </span>
                     <span>Connected:{connectedClients}</span>
                 </div>
             </div>
+
             <div className="bottom-box">
                 <div className="editorcontainer">
                     <div className="editornav">

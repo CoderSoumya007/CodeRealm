@@ -1,13 +1,10 @@
-body{
-    margin: 0;
-    height: 100vh;
-    background-color:#05253b;
-    overflow: hidden;
-display: flex;
-}
+
 #root{
-    width: 100%;
+    margin: 0;
+    background-color:#05253b;
+    height: 100vh;
 }
+
 .container{
     height: 100vh;
     display: flex;
@@ -70,6 +67,7 @@ display: flex;
     padding: 1rem;
     border-radius: 1.5rem;
     height: 15rem;
+    width: 100%;
 }
 
 .joinbuttons{
@@ -141,4 +139,11 @@ input{
         background: #fff;
     }
     
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
 }
