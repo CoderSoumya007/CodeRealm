@@ -101,7 +101,7 @@ export default function Room({ socket }) {
 
         setOutput('');
         try {
-            const response = await fetch('https://coderealm.onrender.com/output', {
+            const response = await fetch('http://localhost:5000/output', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
