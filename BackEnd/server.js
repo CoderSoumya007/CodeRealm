@@ -243,7 +243,7 @@ app.post('/output', function (req, res) {
     }
 
     const executionprocess = (!input) ?
-      exec(`python ${filePath}`, (error, stdout, stderr) => {
+      exec(`python3 ${filePath}`, (error, stdout, stderr) => {
         if (fs.existsSync(filePath)) {
           fs.unlinkSync(filePath);
         }
