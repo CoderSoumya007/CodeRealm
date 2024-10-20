@@ -101,7 +101,7 @@ export default function Room({ socket }) {
 
         setOutput('');
         try {
-            const response = await fetch('13.51.172.71:5000/output', {
+            const response = await fetch('http://13.51.172.71:5000/output', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

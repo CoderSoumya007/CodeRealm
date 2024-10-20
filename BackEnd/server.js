@@ -260,7 +260,7 @@ app.post('/output', function (req, res) {
         }
       })
       :
-      exec(`echo ${input} | python ${filePath}`, (error, stdout, stderr) => {
+      exec(`echo ${input} | python3 ${filePath}`, (error, stdout, stderr) => {
         if (fs.existsSync(filePath)) {
           fs.unlinkSync(filePath);
         }
