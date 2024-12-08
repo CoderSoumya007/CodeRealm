@@ -22,6 +22,7 @@ const io = new Server(server, {
 });
 
 app.get('/', function (req, res) {
+  res.send("hello user")
   console.log("hello server!");
 });
 
