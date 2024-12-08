@@ -31,9 +31,9 @@ app.post('/output', function (req, res) {
   const lang = req.body.language;
   const input = req.body.input;
 
+  const tempFolder = "/tmp";
 
   if (lang == "java") {
-    const tempFolder = "temp";
     const filePath = `${tempFolder}/Main.java`;
     const classfile = `${filePath}`.replace(".java", ".class");
     var responseSent = false;
@@ -129,7 +129,6 @@ app.post('/output', function (req, res) {
   }
 
   if (lang == "c" || lang == "cpp") {
-    const tempFolder = "temp";
     const filePath = `${tempFolder}/main.cpp`;
     const exepath = `${filePath}`.replace(".cpp", ".exe");
     var responseSent = false;
@@ -229,7 +228,6 @@ app.post('/output', function (req, res) {
   }
 
   if (lang == "python") {
-    const tempFolder = "temp";
     const filePath = `${tempFolder}/python.py`;
     var responsesent = false;
     
@@ -288,7 +286,6 @@ app.post('/output', function (req, res) {
   }
 
   if (lang === "javascript") {
-    const tempFolder = "temp";
     const filePath = `${tempFolder}/temp_${Date.now()}.js`;
     var responsesent = false;
 

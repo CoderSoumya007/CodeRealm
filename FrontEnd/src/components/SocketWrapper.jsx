@@ -19,7 +19,7 @@ function addPropsToChildren(children, props) {
 }   
 
 export default function SocketWrapper({children}){
-    const socket=io.connect("http://localhost:5000/");
+    const socket=io.connect("https://code-realm-server.vercel.app");
 
     const location=useLocation();
     const {roomid}=useParams();

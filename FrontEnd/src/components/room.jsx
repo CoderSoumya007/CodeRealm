@@ -101,7 +101,7 @@ export default function Room({ socket }) {
 
         setOutput('');
         try {
-            const response = await fetch('http://localhost:5000/output', {
+            const response = await fetch('https://code-realm-server.vercel.app/output', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
